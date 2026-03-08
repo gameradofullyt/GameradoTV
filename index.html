@@ -17,25 +17,13 @@
 
     <header class="navbar">
         <h1 class="logo-rgb">GAMERADOTV</h1>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html"></a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Categoria</a>
-                    <div class="dropdown-content">
-                        <a href="lista-filmes.html">Filmes 📀</a>
-                        <a href="lista-series.html">Séries 🎬</a>
-                        <a href="lista-animes.html">Animes ⛩️</a>
-                        <a href="lista-desenhos.html">Desenhos 📺</a>
-                        <a href="lista-novelas.html">Novelas 🎭</a>
-                        <a href="lista-canais.html">Canais 📡</a>
-                    </div>
-                </li>
-                <li><a href="generos.html">Gêneos</a></li> 
+        
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar...">
+        </div>
             </ul>
         </nav>
-        
-        </div>
     </header>
 
             </div>
@@ -51,6 +39,7 @@
 <section class="category-slider">
     <h2 class="category-title netflix-style">
         Trailers / Trailers Vazados
+        <a href="generos.html" class="ver-mais-h2">Gêneros ></a>
     </h2>
 
     <div class="slider-wrapper">
@@ -164,6 +153,9 @@
     </div>
 </section>
 
+ <div class="category-divider">
+    <span class="rgb-outline">🍿 CINE PIPOCA 🍿</span>
+</div>
 
         <section class="category-slider">
             <h2 class="category-title">
@@ -917,13 +909,22 @@
         </section>
         
         <section class="category-slider">
-            <h2>Apocalypse 🧟
+            <h2>Apocalipse 🧟
             <a href="lista-desenhos.html" class="ver-mais-h2">Ver Mais ></a>
             </h2>
             <div class="slider-wrapper">
                 <button class="slider-arrow prev" onclick="scrollSlider(this, -1)">&#10094;</button>
                 <div class="slider-track">
+                  <div class="card" onclick="window.location.href='player.html?title=Fallout&url=https://playerflixapi.com/serie/106379'"><img src="https://image.tmdb.org/t/p/w220_and_h330_face/tQRX6GbYooU7kUaarKf5YXDTONy.jpg"><div class="card-info"><h4>Fallout</h4></h4><p>Ação</p><p class="card-date">2024</p></div></div>
                     <div class="card" onclick="window.location.href='player.html?title=Eu Sou a Lenda&url=https://playerflixapi.com/filme/tt0480249'"><img src="https://image.tmdb.org/t/p/w220_and_h330_face/j2jb6DwNCPIU2LtUrJ9zoQIGvSz.jpg"><div class="card-info"><h4>Eu Sou a Lenda</h4></h4><p>Ação</p><p class="card-date">2007</p></div></div>
+                    <div class="card" onclick="window.location.href='player.html?title=Filhos da Esperança&url=https://playerflixapi.com/filme/tt0206634'"><img src="https://image.tmdb.org/t/p/w220_and_h330_face/83qNeC3vHskUDseh78odYAynI6w.jpg"><div class="card-info"><h4>Filhos da Esperança</h4></h4><p>Ação</p><p class="card-date">2006</p></div></div>
+                    <div class="card" onclick="window.location.href='player.html?title=Madrugada dos Mortos&url=https://playerflixapi.com/filme/tt0363547'"><img src="https://image.tmdb.org/t/p/w220_and_h330_face/1ZwFI4EA9xGo3aJV9Ulqx7Y37Rz.jpg"><div class="card-info"><h4>Madrugada dos Mortos</h4></h4><p>Ação</p><p class="card-date">2004</p></div></div>
+                    <div class="card" onclick="window.location.href='player.html?title=Extermínio&url=https://playerflixapi.com/filme/tt0289043'"><img src="https://image.tmdb.org/t/p/w220_and_h330_face/pVTtJSvJoOofD1YoyPSGwWEWmJd.jpg"><div class="card-info"><h4>Extermínio</h4></h4><p>Ação</p><p class="card-date">2002</p></div></div>
+                    <div class="card" onclick="window.location.href='player.html?title=Matrix&url=https://playerflixapi.com/filme/tt0133093'"><img src="https://image.tmdb.org/t/p/w220_and_h330_face/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg"><div class="card-info"><h4>Matrix</h4></h4><p>Ação</p><p class="card-date">1999</p></div></div><div class="card" onclick="window.location.href='player.html?title=Neon Genesis Evangelion&url=https://playerflixapi.com/filme/tt0169858'"><img src="https://image.tmdb.org/t/p/w220_and_h330_face/984vnfPmcerjkz8aEbqulbc2X32.jpg"><div class="card-info"><h4>Neon Genesis</p>Evangelion</h4></h4><p>Ação</p><p class="card-date">1995</p></div></div>
+                    <div class="card" onclick="window.location.href='player.html?title=Akira&url=https://playerflixapi.com/filme/tt0094625'"><img src="https://image.tmdb.org/t/p/w220_and_h330_face/tbwwTQ3EqSdotbQ3ZcIl6vKBv7q.jpg"><div class="card-info"><h4>Akira</h4></h4><p>Ação</p><p class="card-date">1988</p></div></div>
+                    <div class="card" onclick="window.location.href='player.html?title=O Exterminador do Futuro&url=https://playerflixapi.com/filme/tt0088247'"><img src="https://image.tmdb.org/t/p/w220_and_h330_face/fo4SSoNT1ASI4JP7dOLrosWNWKa.jpg"><div class="card-info"><h4>O Exterminador</p>do Futuro</h4></h4><p>Ação</p><p class="card-date">1984</p></div></div>
+                    <div class="card" onclick="window.location.href='player.html?title=Mad Max&url=https://playerflixapi.com/filme/tt0079501'"><img src="https://image.tmdb.org/t/p/w220_and_h330_face/jHJ5xxRjXUfZ6lQHcwibAzepPf2.jpg"><div class="card-info"><h4>Mad Max</h4></h4><p>Ação</p><p class="card-date">1979</p></div></div>
+                    <div class="card" onclick="window.location.href='player.html?title=A Noite dos Mortos-Vivos&url=https://playerflixapi.com/filme/tt0063350'"><img src="https://image.tmdb.org/t/p/w220_and_h330_face/WPnjLV9hKP0TVZ8YJ0qWVWhUHF.jpg"><div class="card-info"><h4>A Noite dos</p>Mortos-Vivos</h4></h4><p>Ação</p><p class="card-date">1968</p></div></div>
                       
                       </div>
                     </div>
@@ -1011,7 +1012,7 @@
         </section>
         
         <section class="category-slider">
-            <h2>SLASHER
+            <h2>Slasher 🔪
             <a href="lista-slasher.html" class="ver-mais-h2">Ver Mais ></a>
             </h2>
             <div class="slider-wrapper">
@@ -1056,7 +1057,7 @@
         </section>
         
         <section class="category-slider">
-            <h2>Animais Assasinos
+            <h2>Animais Assasinos 🩸
             <a href="lista-animaismau.html" class="ver-mais-h2">Ver Mais ></a>
             </h2>
             <div class="slider-wrapper">
@@ -1145,7 +1146,7 @@
         
 
 <div class="category-divider">
-    <span class="rgb-outline">Documentários</span>
+    <span class="rgb-outline">Conteúdos Extras</span>
 </div>
 
 <section class="category-slider">
@@ -2595,7 +2596,7 @@ onclick="window.location.href='playeryt.html?title=Herobrine - Série Completa&p
 </section>
 
     </main>
-
+    
     <script src="script.js"></script>
 </body>
 </html>

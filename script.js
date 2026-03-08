@@ -84,3 +84,55 @@ window.addEventListener('scroll', () => {
 
 // PRIMEIRA CARGA
 carregarFilmes();
+
+// ==========================================
+// PESQUISA EM TEMPO REAL
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById('searchInput');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const termo = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.category-slider');
+            const dividers = document.querySelectorAll('.category-divider');
+            const allCards = document.querySelectorAll('.card');
+
+            if (termo.length > 0) {
+                // 1. Esconde as faixas divisórias (ex: "Sagas", "Cine Pipoca")
+                dividers.forEach(div => div.classList.add('hidden-search'));
+
+                // 2. Filtra os cards seção por seção
+                sections.forEach(section => {
+                    let hasVisibleCard = false;
+                    const cards = section.querySelectorAll('.card');
+
+                    cards.forEach(card => {
+                        const titulo = card.querySelector('h4').innerText.toLowerCase();
+                        const info = card.querySelector('p') ? card.querySelector('p').innerText.toLowerCase() : '';
+
+                        // Verifica se o termo existe no título ou na descrição
+                        if (titulo.includes(termo) || info.includes(termo)) {
+                            card.classList.remove('hidden-search');
+                            hasVisibleCard = true;
+                        } else {
+                            card.classList.add('hidden-search');
+                        }
+                    });
+
+                    // 3. Se a seção inteira (carrossel) não tiver resultados, esconde ela toda
+                    if (hasVisibleCard) {
+                        section.classList.remove('hidden-search');
+                    } else {
+                        section.classList.add('hidden-search');
+                    }
+                });
+            } else {
+                // CAMPO VAZIO: Mostra absolutamente tudo novamente
+                dividers.forEach(div => div.classList.remove('hidden-search'));
+                sections.forEach(section => section.classList.remove('hidden-search'));
+                allCards.forEach(card => card.classList.remove('hidden-search'));
+            }
+        });
+    }
+});
